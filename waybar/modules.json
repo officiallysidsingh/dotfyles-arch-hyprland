@@ -1,66 +1,47 @@
 {
-  // Workspaces
-  
-  "wlr/workspaces" : {
-    "on-click": "activate",
-    "active-only": false,
-    "all-outputs": true,
-    "format": "{icon}",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": "",
-      "sort-by-number": true
-    }
-  },
-
-  // Taskbar
-
-  "wlr/taskbar": {
-    "format": "{icon}",
-    "icon-size": 18,
-    "tooltip-format": "{title}",
-    "on-click": "activate",
-    "on-click-middle": "close",
-    "ignore-list": [
-       "Kitty"
-    ],
-    "app_ids-mapping": {
-        "firefoxdeveloperedition": "firefox-developer-edition"
-    },
-    "rewrite": {
-        "Firefox Web Browser": "Firefox",
-        "Fish Server": "Terminal"
-    }
-  },
-
-  // Power Menu
-
-  "custom/exit": {
-    "format": "",
-    "on-click": "wlogout",
-    "tooltip": false
-  },
+  // ------------------------------------------------------------------------------------
+  // Pre-defined Modules
+  // ------------------------------------------------------------------------------------
 
   // Pulseaudio
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
+    "format-muted": "󰖁 0%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format-bluetooth-muted": "󰗿 {icon} {format_source}",
     "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", " ", " "]
+        "headphone": " ",
+        "default": ["", "󰕾 ", " "]
     },
     "on-click": "pavucontrol"
+  },
+
+  // Backlight
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["", ""]
+  },
+
+  // Clock
+
+  "clock": {
+    "timezone": "Asia/Kolkata",
+    "interval": 60,
+    "format": "{:%I:%M} 󰥔",
+    "max-length": 25
+  },
+
+  // Workspaces
+
+  "hyprland/workspaces": {
+    "format": "{id}: {icon} ",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
   },
 
   // Bluetooth
@@ -75,36 +56,46 @@
   // Battery
 
   "battery": {
-      "states": {
-          "warning": 30,
-          "critical": 15
-      },
-      "format": "{icon}   {capacity}%",
-      "format-charging": "  {capacity}%",
-      "format-plugged": "  {capacity}%",
-      "format-alt": "{icon}  {time}",
-      "format-icons": [" ", " ", " ", " ", " "]
-  },
-
-  // Clock
-
-  "clock": {
-    "timezone": "Asia/Kolkata",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "interval": 10,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-plugged": "{capacity}% 󰂄",
+    "format-icons": [" ", " ", " ", " ", " "]
   },
 
   // Network
 
   "network": {
-    "format": "{ifname}",
-    "format-wifi": "   {signalStrength}%",
-    "format-ethernet": "  {ipaddr}",
-    "format-disconnected": "", //An empty format will hide the module.
-    "tooltip-format": " {ifname} via {gwaddri}",
-    "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+    "format": " {ifname}",
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "format-wifi": "  {signalStrength}%",
+    "tooltip-format-wifi": "  {essid}",
+    "format-ethernet": "󰈁 {ipaddr}",
+    "tooltip-format-ethernet": "󰈁 {ifname}",
+    "format-disconnected": "",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50
+    "max-length": 15
   },
+
+  // ------------------------------------------------------------------------------------
+  // Custom Modules
+  // ------------------------------------------------------------------------------------
+
+  // Arch Logo
+
+  "custom/arch-pill": {
+    "format": ""
+  },
+
+  // Power Menu
+
+  "custom/exit": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+
 }

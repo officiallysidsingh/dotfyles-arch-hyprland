@@ -8,9 +8,6 @@
   // General Settings
   
   "layer": "top",
-  "height": 16,
-  "margin-left": 0,
-  "margin-right": 0,    
   "spacing": 0,
 
   // Load Modules
@@ -22,21 +19,23 @@
   // Modules Left
 
   "modules-left": [
-    "wlr/taskbar",
+    "custom/arch-pill",
+    "pulseaudio",
+    "backlight",
+    "network",
   ],
 
   // Modules Center
 
   "modules-center": [
-    "wlr/workspaces"
+    "hyprland/workspaces",
   ],
 
   // Modules Right
 
   "modules-right": [
-    "pulseaudio",
+    "clock",
     "battery",
     "custom/exit",
-    "clock"
   ],
 }
