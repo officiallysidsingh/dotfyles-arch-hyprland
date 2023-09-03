@@ -1,0 +1,42 @@
+{
+  // Positioning
+
+  "position": "top",
+  "margin-top": 14,
+  "margin-bottom": 0,
+  
+  // General Settings
+  
+  "layer": "top",
+  "height": 16,
+  "margin-left": 0,
+  "margin-right": 0,    
+  "spacing": 0,
+
+  // Load Modules
+  
+  "include": ["~/.config/waybar/modules.json"],
+
+  // Using Loaded Modules
+  
+  // Modules Left
+
+  "modules-left": [
+    "wlr/taskbar",
+  ],
+
+  // Modules Center
+
+  "modules-center": [
+    "wlr/workspaces"
+  ],
+
+  // Modules Right
+
+  "modules-right": [
+    "pulseaudio",
+    "battery",
+    "custom/exit",
+    "clock"
+  ],
+}
