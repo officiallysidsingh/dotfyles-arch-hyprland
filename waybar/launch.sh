@@ -19,4 +19,4 @@ killall waybar
 # Loading the configuration
 # -----------------------------------------------------
 
-waybar
+waybar &

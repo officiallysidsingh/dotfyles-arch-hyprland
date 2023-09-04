@@ -2,7 +2,7 @@
   // Positioning
 
   "position": "top",
-  "margin-top": 14,
+  "margin-top": 10,
   "margin-bottom": 0,
   
   // General Settings
@@ -34,6 +34,7 @@
   // Modules Right
 
   "modules-right": [
+    "group/hardware",
     "clock",
     "battery",
     "custom/exit",

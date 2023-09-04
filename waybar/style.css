@@ -1,14 +1,8 @@
 /* -----------------------------------------------------
- * Import Pywal colors 
- * ----------------------------------------------------- */
-
-@import 'colors-waybar.css';
-
-/* -----------------------------------------------------
  * General 
  * ----------------------------------------------------- */
 
-*{
+* {
   font-family: "FiraCode Nerd Font SemBd", "Symbol Nerd Font";
   border: none;
   font-size: 15px;
@@ -18,128 +12,180 @@
  * Whole Window 
  * ----------------------------------------------------- */
 
-window#waybar{
+window#waybar {
   background: transparent;
-  /* margin-right: 8px; */
 }
 /* -----------------------------------------------------
  * Arch-Pill 
  * ----------------------------------------------------- */
 
 #custom-arch-pill {
-  margin: 5px;
+  margin-right: 5px;
   margin-left: 25px;
-  padding-top: 5px;
+  padding-top: 2px;
   padding-right: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   padding-left: 10px;
   border-radius: 10px;
-  background-color: #B4BEFE;
-  color: #1A1B26;
+  background-color: #b4befe;
+  color: #1a1b26;
 }
 
 /* -----------------------------------------------------
  * Pulseaudio
  * ----------------------------------------------------- */
 
-#pulseaudio{
-  margin: 5px;
-  padding-top: 5px;
+#pulseaudio {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 2px;
   padding-right: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   padding-left: 10px;
   border-radius: 10px;
-  background-color: #FF79C6;
-  color: #1A1B26;
+  background-color: #ff79c6;
+  color: #1a1b26;
 }
 
-#pulseaudio.muted{
-  background-color: #D20F39;
+#pulseaudio.muted {
+  background-color: #d20f39;
 }
 
 /* -----------------------------------------------------
  * Backlight
  * ----------------------------------------------------- */
 
-#backlight{
-  margin: 5px;
-  padding-top: 5px;
+#backlight {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 2px;
   padding-right: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   padding-left: 10px;
   border-radius: 10px;
-  background-color: #94E2D5;
-  color: #1A1B26;
+  background-color: #94e2d5;
+  color: #1a1b26;
 }
 
 /* -----------------------------------------------------
  * Network
  * ----------------------------------------------------- */
 
-#network{
-  margin: 5px;
-  padding-top: 5px;
+#network {
+  margin-left: 5px;
+  padding-top: 2px;
   padding-right: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   padding-left: 10px;
   border-radius: 10px;
-  background-color: #74C7EC;
-  color: #1A1B26;
+  background-color: #74c7ec;
+  color: #1a1b26;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+  padding-top: 2px;
+  padding-right: 15px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: #191927;
+}
+
+#workspaces button {
+  color: #f5aa7f;
+}
+
+#workspaces button.active {
+  color: #a6e3a1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Workaround To Remove Background From Buttons */
+
+#workspaces button:hover {
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* -----------------------------------------------------
+ * Hardware Group
+ * ----------------------------------------------------- */
+
+#cpu,#memory{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #74c7ec;
+}
+
+#cpu{
+  padding-left: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#memory{
+  padding-right: 13px;
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* -----------------------------------------------------
  * Clock
  * ----------------------------------------------------- */
 
-#clock{
-  margin: 5px;
-  padding-top: 5px;
+#clock {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 2px;
   padding-right: 13px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   padding-left: 10px;
   border-radius: 10px;
-  background-color: #CBA6F7;
-  color: #1A1B26;
+  background-color: #cba6f7;
+  color: #1a1b26;
 }
 
 /* -----------------------------------------------------
  * Battery
  * ----------------------------------------------------- */
 
-#battery{
-  margin: 5px;
-  padding-top: 5px;
+#battery {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 2px;
   padding-right: 13px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   padding-left: 10px;
   border-radius: 10px;
-  background-color: #A6E3A1;
-  color: #1A1B26;
+  background-color: #a6e3a1;
+  color: #1a1b26;
 }
 
-#battery.warning{
-  background-color: #EED49F;
+#battery.warning {
+  background-color: #eed49f;
 }
 
-#battery.critical{
-  background-color: #D20F39;
+#battery.critical {
+  background-color: #d20f39;
 }
 
 /* -----------------------------------------------------
  * Custom Exit
  * ----------------------------------------------------- */
 
-#custom-exit{
-  margin: 5px;
+#custom-exit {
+  margin-left: 5px;
   margin-right: 25px;
-  padding-top: 5px;
+  padding-top: 2px;
   padding-right: 13px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   padding-left: 10px;
   border-radius: 10px;
-  background-color: #B4BEFE;
+  background-color: #b4befe;
 }
-
-/* -----------------------------------------------------
- * Workspaces 
- * ----------------------------------------------------- */
