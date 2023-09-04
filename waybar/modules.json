@@ -96,7 +96,7 @@
 
   "custom/exit": {
     "format": "",
-    "on-click": "wlogout",
+    "on-click": "wlogout -b 4",
     "tooltip": false
   },
 
@@ -106,10 +106,7 @@
 
   "group/hardware": {
     "orientation": "horizontal",
-    "modules": [
-      "cpu",
-      "memory",
-    ],
+    "modules": ["cpu", "memory"]
   },
 
   "cpu": {
@@ -118,5 +115,5 @@
 
   "memory": {
     "format": "{percentage}%  "
-  },
+  }
 }
