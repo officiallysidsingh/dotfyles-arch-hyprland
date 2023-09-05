@@ -96,7 +96,7 @@ window#waybar {
 }
 
 #workspaces button {
-  color: #f5aa7f;
+  color: #ed8796;
 }
 
 #workspaces button.active {
@@ -116,19 +116,20 @@ window#waybar {
  * Hardware Group
  * ----------------------------------------------------- */
 
-#cpu,#memory{
+#cpu,
+#memory {
   padding-top: 2px;
   padding-bottom: 2px;
   background-color: #74c7ec;
 }
 
-#cpu{
+#cpu {
   padding-left: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-#memory{
+#memory {
   padding-right: 13px;
   margin-right: 5px;
   border-top-right-radius: 10px;
