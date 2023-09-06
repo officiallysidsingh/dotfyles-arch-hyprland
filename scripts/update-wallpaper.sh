@@ -45,6 +45,6 @@ swww img $selected_wallpaper --transition-step 20 --transition-fps=20
 # Send notification
 # -----------------------------------------------------
 
-notify-send "Theme and Wallpaper updated" "With image $selected_wallpaper"
+notify-send "Wallpaper updated" "With image $selected_wallpaper"
 
 echo "DONE!"
