@@ -38,14 +38,12 @@
   // ------------------------------------------------------------------------------------
 
   "network": {
+    "interface": "wlan0",
+    "interval": 2,
     "format": " {ifname}",
-    "tooltip-format": " {ifname} via {gwaddri}",
-    "format-wifi": "  {signalStrength}%",
-    "tooltip-format-wifi": "  {essid}",
+    "format-wifi": "  {essid}",
     "format-ethernet": "󰈁 {ipaddr}",
-    "tooltip-format-ethernet": "󰈁 {ifname}",
-    "format-disconnected": "",
-    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format": " {bandwidthDownBytes}  {bandwidthUpBytes}",
     "max-length": 15
   },
 
