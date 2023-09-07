@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 #      _       __      ____                           
 #     | |     / /___ _/ / /___  ____ _____  ___  _____
 #     | | /| / / __ `/ / / __ \/ __ `/ __ \/ _ \/ ___/
@@ -64,4 +67,4 @@ swww img $selected_wallpaper --transition-step 20 --transition-fps=20
 
 notify-send "Wallpaper updated" "With image $selected_wallpaper"
 
-echo "DONE!"
+exit 0
