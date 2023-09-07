@@ -65,6 +65,6 @@ swww img $selected_wallpaper --transition-step 20 --transition-fps=20
 # Send notification
 # -----------------------------------------------------
 
-notify-send "Wallpaper updated" "With image $selected_wallpaper"
+dunstify "Wallpaper updated" "With image $selected_wallpaper"
 
 exit 0
