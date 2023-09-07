@@ -37,9 +37,21 @@ command="$1"
 # Functions to increase, decrease and toggle
 # ----------------------------------------------------------------
 
+# ----------------------------------------------------------------
+# Increase Function Internals :-
+#   1. If Speakers Are Mute, Check if Volume == 0.
+#       I) If Volume == 0.
+#           i) Increase Volume By 5
+#          ii) Unmute Speakers
+#         iii) Show Notification
+#      II) Else (If Volume != 0)
+#           i) Unmute Speakers
+#   2. Else (If Speakers Are Not Mute)
+#       I) Increase Volume By 5
+#      II) Show Notification
+# ----------------------------------------------------------------
+
 increase_function() {
-  # If Speaker is Muted and We Increase Volume
-  # It Automatically Unmutes
   if [ "$(pamixer --get-mute)" == "true" ]
   then
     if [ "$(pamixer --get-volume)" == "0" ]
@@ -55,6 +67,19 @@ increase_function() {
     dunstify "Volume: " -h int:value:"`pamixer --get-volume`"
   fi
 }
+
+# ----------------------------------------------------------------
+# Increase Function Internals :-
+#   1. If Volume == 5 (Last Step Before Reaching 0)
+#       I) Decrease Volume By 5
+#      II) Mute Speakers
+#   2. Else (If Volume != 5)
+#       I) If Speakers Are Mute
+#           i) Show Notification
+#      II) Else (If Speakers Are Not Mute)
+#           i) Decrease Volume By 5
+#           i) Show Notification
+# ----------------------------------------------------------------
 
 decrease_function() {
   if [ "$(pamixer --get-volume)" == "5" ]
@@ -73,14 +98,24 @@ decrease_function() {
   fi
 }
 
-toggle_function() {
-  pamixer -t
+# ----------------------------------------------------------------
+# Toggle Function Internals :-
+#   1. If Speakers Are Muted
+#       I) Unmute Speakers
+#      II) Send Notification
+#   2. Else (If Speakers Are Not Muted)
+#       I) Mute Speakers
+#      II) Send Notification
+# ----------------------------------------------------------------
 
+toggle_function() {
   if [ "$(pamixer --get-mute)" == "true" ]
   then
-    dunstify "Speaker Muted"
-  else
+    pamixer -u
     dunstify "Speaker Unmuted" -h int:value:"`pamixer --get-volume`"
+  else
+    pamixer -m
+    dunstify "Speaker Muted"
   fi
 }
 
