@@ -22,7 +22,7 @@
 # Specify the path to your wallpaper folder
 # ----------------------------------------------------- 
 
-wallpaper_folder="$HOME/wallpaper"
+wallpaper_folder="$HOME/.config/wallpapers"
 
 # -----------------------------------------------------
 # Check if the folder exists
@@ -65,6 +65,6 @@ swww img $selected_wallpaper --transition-step 20 --transition-fps=20
 # Send notification
 # -----------------------------------------------------
 
-dunstify "Wallpaper updated" "With image $selected_wallpaper"
+notify-send "Wallpaper updated" "With image $selected_wallpaper"
 
 exit 0
