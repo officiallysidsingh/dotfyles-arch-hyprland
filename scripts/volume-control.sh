@@ -18,6 +18,16 @@
 
 
 # ----------------------------------------------------------------
+# Check If Pamixer is Installed Or Not
+# ----------------------------------------------------------------
+
+if ! command -v pamixer &> /dev/null; then
+    echo -e "Pamixer is Not Installed.\nPlease Install It To Use This Script."
+    exit 1
+fi
+
+
+# ----------------------------------------------------------------
 # Check the number of arguments provided
 # ----------------------------------------------------------------
 
@@ -58,13 +68,14 @@ increase_function() {
     then
       pamixer -i 5
       pamixer -u
-      dunstify "Volume: " -h int:value:"`pamixer --get-volume`"
+      notify-send "Volume Increased  " -h int:value:"`pamixer --get-volume`"
     else
+      notify-send "Unmuted 󰕾 "
       pamixer -u
     fi
   else
     pamixer -i 5
-    dunstify "Volume: " -h int:value:"`pamixer --get-volume`"
+    notify-send "Volume Increased  " -h int:value:"`pamixer --get-volume`"
   fi
 }
 
@@ -86,14 +97,14 @@ decrease_function() {
   then
     pamixer -d 5
     pamixer -m
-    dunstify "Speaker Muted"
+    notify-send --urgency critical "Muted 󰖁 "
   else
     if [ "$(pamixer --get-mute)" == "true" ]
     then
-      dunstify "Speaker Muted"
+    notify-send --urgency critical "Muted 󰖁 "
     else
       pamixer -d 5
-      dunstify "Volume: " -h int:value:"`pamixer --get-volume`"
+      notify-send "Volume Decreased  " -h int:value:"`pamixer --get-volume`"
     fi
   fi
 }
@@ -112,10 +123,10 @@ toggle_function() {
   if [ "$(pamixer --get-mute)" == "true" ]
   then
     pamixer -u
-    dunstify "Speaker Unmuted" -h int:value:"`pamixer --get-volume`"
+    notify-send "Unmuted 󰕾 "
   else
     pamixer -m
-    dunstify "Speaker Muted"
+    notify-send --urgency critical "Muted 󰖁 "
   fi
 }
 
