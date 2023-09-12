@@ -20,9 +20,9 @@
 
   "modules-left": [
     "custom/arch-pill",
-    "pulseaudio",
-    "backlight",
-    "network",
+    "battery",
+    "clock",
+    "group/hardware",
   ],
 
   // Modules Center
@@ -34,9 +34,9 @@
   // Modules Right
 
   "modules-right": [
-    "group/hardware",
-    "clock",
-    "battery",
+    "network",
+    "backlight",
+    "pulseaudio",
     "custom/exit",
   ],
 }

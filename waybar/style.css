@@ -32,54 +32,73 @@ window#waybar {
 }
 
 /* -----------------------------------------------------
- * Pulseaudio
+ * Battery
  * ----------------------------------------------------- */
 
-#pulseaudio {
+#battery {
   margin-left: 5px;
   margin-right: 5px;
   padding-top: 2px;
-  padding-right: 15px;
+  padding-right: 13px;
   padding-bottom: 2px;
   padding-left: 10px;
-  border-radius: 10px;
-  background-color: #ff79c6;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 2px;
+  background-color: #a6e3a1;
   color: #1a1b26;
 }
 
-#pulseaudio.muted {
+#battery.warning {
+  background-color: #eed49f;
+}
+
+#battery.critical {
   background-color: #d20f39;
 }
 
 /* -----------------------------------------------------
- * Backlight
+ * Clock
  * ----------------------------------------------------- */
 
-#backlight {
+#clock {
   margin-left: 5px;
   margin-right: 5px;
   padding-top: 2px;
-  padding-right: 15px;
-  padding-bottom: 2px;
+  padding-right: 13px;
+  padding-bottom: 3px;
   padding-left: 10px;
-  border-radius: 10px;
-  background-color: #94e2d5;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 2px;
+  background-color: #cba6f7;
   color: #1a1b26;
 }
 
 /* -----------------------------------------------------
- * Network
+ * Hardware Group
  * ----------------------------------------------------- */
 
-#network {
-  margin-left: 5px;
+#cpu,
+#memory {
   padding-top: 2px;
-  padding-right: 15px;
   padding-bottom: 2px;
-  padding-left: 10px;
-  border-radius: 10px;
   background-color: #74c7ec;
-  color: #1a1b26;
+}
+
+#cpu {
+  padding-left: 15px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 20px;
+}
+
+#memory {
+  padding-right: 10px;
+  margin-right: 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 2px;
 }
 
 /* -----------------------------------------------------
@@ -88,10 +107,10 @@ window#waybar {
 
 #workspaces {
   padding-top: 2px;
-  padding-right: 15px;
+  padding-right: 10px;
   padding-bottom: 2px;
-  padding-left: 10px;
-  border-radius: 10px;
+  padding-left: 5px;
+  border-radius: 20px;
   background-color: #191927;
 }
 
@@ -113,66 +132,62 @@ window#waybar {
 }
 
 /* -----------------------------------------------------
- * Hardware Group
+ * Network
  * ----------------------------------------------------- */
 
-#cpu,
-#memory {
+#network {
+  margin-left: 5px;
   padding-top: 2px;
+  padding-right: 15px;
   padding-bottom: 2px;
+  padding-left: 12px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 20px;
   background-color: #74c7ec;
-}
-
-#cpu {
-  padding-left: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-#memory {
-  padding-right: 13px;
-  margin-right: 5px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-/* -----------------------------------------------------
- * Clock
- * ----------------------------------------------------- */
-
-#clock {
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-top: 2px;
-  padding-right: 13px;
-  padding-bottom: 2px;
-  padding-left: 10px;
-  border-radius: 10px;
-  background-color: #cba6f7;
   color: #1a1b26;
 }
 
 /* -----------------------------------------------------
- * Battery
+ * Backlight
  * ----------------------------------------------------- */
 
-#battery {
+#backlight {
   margin-left: 5px;
   margin-right: 5px;
   padding-top: 2px;
-  padding-right: 13px;
+  padding-right: 15px;
   padding-bottom: 2px;
-  padding-left: 10px;
-  border-radius: 10px;
-  background-color: #a6e3a1;
+  padding-left: 12px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 20px;
+  background-color: #94e2d5;
   color: #1a1b26;
 }
 
-#battery.warning {
-  background-color: #eed49f;
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 2px;
+  padding-right: 15px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 20px;
+  background-color: #ff79c6;
+  color: #1a1b26;
 }
 
-#battery.critical {
+#pulseaudio.muted {
   background-color: #d20f39;
 }
 
