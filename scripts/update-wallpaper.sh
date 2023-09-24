@@ -22,7 +22,7 @@
 # Specify the path to your wallpaper folder
 # ----------------------------------------------------- 
 
-wallpaper_folder="$HOME/.config/wallpapers"
+wallpaper_folder="/hdd/entertainment/wallpapers"
 
 # -----------------------------------------------------
 # Check if the folder exists
@@ -59,12 +59,13 @@ selected_wallpaper="${wallpaper_files[random_index]}"
 # Set the new current_wallpaper
 # -----------------------------------------------------
 
+swww init
 swww img $selected_wallpaper --transition-step 20 --transition-fps=20
 
 # -----------------------------------------------------
 # Send notification
 # -----------------------------------------------------
 
-notify-send "Wallpaper updated" "With image $selected_wallpaper"
+notify-send "Wallpaper updated" "With $(basename "$selected_wallpaper")"
 
 exit 0
