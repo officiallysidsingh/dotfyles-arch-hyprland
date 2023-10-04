@@ -44,6 +44,7 @@ alias tf="tmuxifier"
 
 alias v="nvim"
 alias dots="cd ~/.config && nvim"
+alias nvc="cd ~/.config/nvim && nvim"
 
 # ------------------------------------------------------------
 # Pacman & Yay Command Aliases
@@ -51,9 +52,10 @@ alias dots="cd ~/.config && nvim"
 
 alias pac="sudo pacman -S"
 alias pacup="sudo pacman -Syyu"
-alias yayup="yay -Sua"
 alias pacdep="sudo pacman -Qdt"
-alias cleanup="sudo pacman -Rns $(pacman -Qdtq)"
+alias cleanup="sudo pacman -Qtdq | sudo pacman -Rns -"
+alias pacrem="sudo pacman -Rns"
+alias yayup="yay -Sua"
 
 # ------------------------------------------------------------
 # Install Command Aliases
