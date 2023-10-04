@@ -43,8 +43,8 @@ alias tf="tmuxifier"
 # ------------------------------------------------------------
 
 alias v="nvim"
-alias dots="cd ~/.config && nvim"
-alias nvc="cd ~/.config/nvim && nvim"
+alias dots="nvim ~/.config"
+alias nvc="nvim ~/.config/nvim"
 
 # ------------------------------------------------------------
 # Pacman & Yay Command Aliases
