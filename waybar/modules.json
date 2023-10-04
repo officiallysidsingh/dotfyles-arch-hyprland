@@ -31,6 +31,7 @@
     "timezone": "Asia/Kolkata",
     "interval": 60,
     "format": "󰥔 {:%I:%M}",
+    "tooltip-format": "{:%a, %d/%m/%Y}",
     "max-length": 25
   },
 
